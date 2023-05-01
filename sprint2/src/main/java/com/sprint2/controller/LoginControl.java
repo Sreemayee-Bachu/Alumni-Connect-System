@@ -34,7 +34,7 @@ public class LoginControl {
 	@ApiOperation(value="Login by username and password")
 	public String loginByNamePassword(@PathVariable(value = "username") String username,@PathVariable(value = "password") String password) throws ResourceNotFoundException{
 		String result= loginService.login(username, password);
-		if(result!=null && result!="Sreemayee")
+		if(result!=null && result!="Rithanya")
 			return "Logged in as "+username;
 		else
 			return "Failed!!";
