@@ -46,11 +46,7 @@ public class LoginControl {
 		Integer userId = loginRepo.loginByNamePassword(username, oldPassword).getUser_id();
 		Users user = loginRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("Sorry! No User found with this credentials."));
 		String result=loginService.changePassword(username, oldPassword, newPassword);
-<<<<<<< HEAD
-		if(result!=null && result!="")
-=======
-		if(result!=null && result!="-")
->>>>>>> branch2
+		if(result!=null)
 			return "Password changed";
 		else
 			return "Failed!!";
